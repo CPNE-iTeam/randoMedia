@@ -9,7 +9,7 @@ $uploadOk = 1;
 $mime = mime_content_type($_FILES["fileToUpload"]["tmp_name"]);
 
 
-$maxFileSize = 14000000 ;
+$maxFileSize = 14000000; // 14MB
 
 $allowedFilesTypes = array("jpg", "jpeg", "png", "gif", "mp4", "webm");
 $allowedMimesTypes = array("image/jpeg", "image/png", "image/gif", "video/mp4", "video/webm");
