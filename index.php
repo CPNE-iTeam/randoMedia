@@ -17,7 +17,7 @@
 
         if (in_array($ext, $videoExts)) {   
             echo '<video controls>';
-            echo '<source src="'.$path.'/'.$selectedMedia.'" type="video/mp4">';
+            echo '<source src="'.$path.'/'.$selectedMedia.'#t=0.001" type="video/mp4">';
             echo 'Your browser does not support the video tag.';
             echo '</video>';
         } else {
@@ -25,7 +25,7 @@
         }
     ?>
     <footer>
-        <a href="new.php">Upload new random media</a>
+        <a href="new.html">Upload new random media</a>
     </footer>
 </body>
 </html>
