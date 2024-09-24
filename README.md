@@ -17,7 +17,7 @@ RandoMedia is a website that shows random medias.
 
 ## Installation
 
-¯\_(ツ)_/¯
+¯\\_(ツ)_/¯
 
 ## Usage
 
