@@ -19,6 +19,6 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: "/www/jdm/"
+        server-dir: "/www/jdm/randoMedia"
         local-dir: ./
         dry-run: false
