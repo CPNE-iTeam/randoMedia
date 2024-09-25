@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(response => response.json())
             .then(data => {
-                alert(data.success || data.error);
                 fetchRandomMedia();
             })
             .catch(error => console.error('Error (we don\'t care abt it) :', error));
