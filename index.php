@@ -14,5 +14,7 @@
         <input type="file" id="file-input" accept="image/*,video/*" style="display: none;">
     </div>
     <script src="scripts/script.js"></script>
+    <script src="scripts/moderation.js"></script>
+
 </body>
 </html>
