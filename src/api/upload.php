@@ -14,6 +14,9 @@ if (isset($_FILES['fileToUpload'])) {
     }
 
     $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'mp4', "webm"];
+    $allowedMimesTypes = array("image/jpeg", "image/png", "image/gif", "video/mp4", "video/webm");
+    $mime = mime_content_type($_FILES["fileToUpload"]["tmp_name"]);
+
     $fileExtension = pathinfo($file['name'], PATHINFO_EXTENSION);
 
     if (!in_array(strtolower($fileExtension), $allowedExtensions)) {
@@ -21,6 +24,10 @@ if (isset($_FILES['fileToUpload'])) {
         exit;
     }
 
+    if(!in_array($mime, $allowedMimesTypes)) {
+        echo "Sorry, only JPG, JPEG, PNG, GIF, MP4 & WEBM files are allowed. (1)";
+        $uploadOk = 0;
+    }
 
     $mediaDir = __DIR__ . '/../medias/';
     do {
