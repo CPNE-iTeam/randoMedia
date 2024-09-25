@@ -26,4 +26,7 @@ RandoMedia is a website that shows random medias.
 3. Click buttons to interact with the media.
 
 ---
-2+2=7
+2+2=7*
+
+
+*This is not a real affirmation based on actual scientific knowledge.
