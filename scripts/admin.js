@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const basePath = ".."
     const apiPath = `${basePath}/api/recive_all.php`;
     const mediaPath = `${basePath}/medias/`;
+    
 
     function fetchMedias() {
         fetch(apiPath)
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => console.error('Stupid error :', error));
     }
+
 
     fetchMedias();
 });

@@ -8,6 +8,6 @@
 <body>
     <div id='content'></div>
     <script src="../scripts/admin.js"></script>
-    <script src="scripts/moderation.js"></script>
+    <script src="../scripts/moderation.js"></script>
 </body>
 </html>
