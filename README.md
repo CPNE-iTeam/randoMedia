@@ -15,9 +15,9 @@ RandoMedia is a website that shows random medias.
 - JavaScript
 - PHP (for backend)
 
-## Installation
+## How can I install it
 
-¯\\_(ツ)_/¯
+You don't.
 
 ## Usage
 
