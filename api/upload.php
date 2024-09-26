@@ -30,9 +30,7 @@ if (isset($_FILES['fileToUpload'])) {
     }
 
     $mediaDir = __DIR__ . '/../medias/';
-    do {
-        $randomName = uniqid('', true) . '.' . $fileExtension;
-    } while (file_exists($mediaDir . $randomName));
+        $randomName = md5_file($file['tmp_name']) . '.' . $fileExtension;
 
     if (move_uploaded_file($file['tmp_name'], $mediaDir . $randomName)) {
         echo json_encode(['success' => true, 'file' => '/medias/' . $randomName]);
