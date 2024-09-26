@@ -1,19 +1,30 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
 include_once(dirname(__FILE__) . "/secrets.php");
 
-$adminPassword = $_POST['adminPassword'];
-$mediaPath = $_POST['mediaPath'];
+if (!isset($_POST['adminPassword'], $_POST['mediaPath'])) {
+    echo json_encode(['error' => 'Missing required parameters.']);
+    exit();
+}
 
-if($adminPassword !== ADMIN_PASSWORD){
+$adminPassword = $_POST['adminPassword'];
+$mediaPath = dirname(__FILE__) . "/../" . $_POST['mediaPath'];
+
+if ($adminPassword !== ADMIN_PASSWORD) {
     echo json_encode(['error' => 'Unauthorized']);
     exit();
 }
 
-if(unlink($mediaPath)){
+if (!file_exists($mediaPath)) {
+        echo json_encode(['error' => 'Media file does not exist.']);
+    exit();
+}
 
-}else{
+if (unlink($mediaPath)) {
+    echo json_encode(['success' => 'Media removed successfully.']);
+} else {
     echo json_encode(['error' => 'Error while removing media.']);
     exit();
 }
