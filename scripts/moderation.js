@@ -1,7 +1,6 @@
-function removeMedia() {
-    const mediaPath = localStorage.getItem("mediaPath");
+function removeMedia(mediaPath) {
     const adminPassword = prompt("Enter the admin password to remove this media:");
-    fetch("api/remove.php", {
+    fetch("../api/remove.php", {
         method: 'POST',
         body: objectToFormData({ mediaPath: mediaPath, adminPassword: adminPassword }),
     }).catch(error => console.error('Error :', error));

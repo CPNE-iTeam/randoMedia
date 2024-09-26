@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    localStorage.setItem("mediaPath", "medias/"+data.file);
                     const mediaUrl = mediaPath + data.file;
                     mediaDisplay.innerHTML = `
                         ${data.file.endsWith('.mp4') ? 
